@@ -116,6 +116,18 @@ li.disabled {
   text-decoration: line-through;
 }
 
+.btn-outline-info {
+  background: #f8f9fa;
+  border: 2px solid rgba(16, 33, 39, 0.884) !important;
+  color: #222222;
+}
+
+body.dark .btn-outline-info {
+  background: rgba(16, 33, 39, 0.884);
+  color: #CED097;
+  border: 2px solid #005C69 !important;
+}
+
 body {
   background: #CED097;
   font-family: 'Roboto', sans-serif;

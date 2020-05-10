@@ -129,7 +129,16 @@ $borderColorDark:#005C69;
 li.disabled {
   text-decoration: line-through;
 }
-
+.btn-outline-info{
+  background: $test;
+  border:2px solid $borderColor !important;
+  color:$grisOcuro;
+  body.dark &{
+    background: $back;
+    color: $backlight;
+    border:2px solid $borderColorDark !important;
+  }
+}
 body{
   background: $backlight;
   font-family: 'Roboto', sans-serif;
@@ -189,7 +198,6 @@ body{
     background: $back;
     color: $backlight;
     border:2px solid $borderColorDark !important;
-    
   }
 }
 .carousel-control-prev-icon,
