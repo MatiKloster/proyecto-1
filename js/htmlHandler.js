@@ -129,7 +129,22 @@ var carouselChangeHandler=function(event){
   $(botonSelector).toggleClass('active');
   $("#carouselNivel").carousel("pause");
 };
-
+var showSuccess=function(grid){
+  let where='#alert'+grid;
+  let html='<div class="col-8" ><div class="alert alert-success alert-dismissible fade show" role="alert">'
+  html+='<strong>Ganaste!</strong> Te daría un regalo pero estoy respetando el distanciamiento. Volvé cuando quieras!'
+  html+='<button type="button" class="close" data-dismiss="alert" aria-label="Close">'
+  html+='<span aria-hidden="true">&times;</span></button></div></div>'
+  $(where).html(html);
+}
+var showSuccesTimeOut=function(grid){
+  let where='#alert'+grid;
+  let html='<div class="col-8" ><div class="alert alert-success alert-dismissible fade show" role="alert">'
+  html+='<strong>Ganaste!</strong> Te daría un regalo pero estoy respetando el distanciamiento. Volvé cuando quieras!'
+  html+='<button type="button" class="close" data-dismiss="alert" aria-label="Close">'
+  html+='<span aria-hidden="true">&times;</span></button></div></div>'
+  $(where).html(html);
+}
 if(localStorage.getItem('Dark')==null){
   localStorage.setItem('Dark'); 
 }else{

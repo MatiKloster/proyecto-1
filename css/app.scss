@@ -8,11 +8,11 @@ $ButtonBackgroundColor:#f8f9fa;
 $colorPrueba:rgb(255, 224, 224);
 $colorLogo:#ffdd0a;
 $backlight:#CED097;
-$colorDark0:#28e276;
+$colorDark0:#28e275cc;
 $colorDark1:#E54B4B;
 $colorDark2:#F56476;
 $colorDark3:#33658A;
-$colorDark4:#F6AE2D;
+$colorDark4:rgba(246, 176, 45, 0.801);
 $colorDark5:#008DD5;
 $colorDark6:#6B4E71;
 $colorDark7:#6B0F1A;
@@ -117,7 +117,15 @@ $borderColorDark:#005C69;
   }
 }
 
-
+.alert{
+    background-color: $test;
+    border-color:$borderColor;
+  body.dark &{
+    color:$colorLogo;
+    background-color: $back;
+    border-color:$borderColorDark ;
+  }
+}
 li.disabled {
   text-decoration: line-through;
 }

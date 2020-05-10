@@ -1,100 +1,119 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/app.css">
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainNav">
-        <a class="navbar-brand" href="#">
-          <img src="svg/sopaBlack.svg" width="30" height="30" id="brandsvg" class="d-inline-block align-top" alt="">
-          Sotra de Lepas
-        </a>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active" id="linkNavN0">
-            <a class="nav-link" href="#" number="0">Facil<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item" id="linkNavN1">
-            <a class="nav-link" href="#" number="1">Medio</a>
-          </li>
-          <li class="nav-item" id="linkNavN2">
-            <a class="nav-link" href="#" number="2">AAAAA</a>
-          </li>
-          <li class="nav-item"  id="linkNavN3">
-            <a class="nav-link" href="#" number="3">About</a>
-          </li>
-          <li class="nav-item">
-            <button class="switch" id="switch">
-              <span><i class="fas fa-sun"></i></span>
-              <span><i class="fas fa-moon"></i></span>
-            </button>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div id="carouselNivel" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active" id="cNivel1">
-          <div class="row py-5">
-            <div class="col-8" id="Grilla1"></div>
-            <div class="col-2" id="Palabras1">
-              
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item" id="cNivel2">
-          <div class="row py-5">
-            <div class="col-8" id="Grilla2"></div>
-            <div class="col-2" id="Palabras2"></div>
-          </div>
-        </div>
-        <div class="carousel-item" id="cNivel3">
-          <div class="row py-5">
-            <div class="col-8" id="Grilla3"></div>
-            <div class="col-2" id="Palabras3"></div>
-          </div>
-        </div>
-        <div class="carousel-item" id="cNivelAbout">
-          <div class="row py-5">
-            <a>Creditos to my mom "<3" </a>
-             Iconos diseñados por <a href="https://www.flaticon.es/autores/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#" >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <a class="navbar-brand" href="#">
+      <img src="svg/sopaBlack.svg" width="30" height="30" id="brandsvg" class="d-inline-block align-top" alt="">
+      Sotra de Lepas
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active" id="linkNavN0">
+          <a class="nav-link" href="#" number="0">Facil<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" id="linkNavN1">
+          <a class="nav-link" href="#" number="1">Medio</a>
+        </li>
+        <li class="nav-item" id="linkNavN2">
+          <a class="nav-link" href="#" number="2">AAAAA</a>
+        </li>
+        <li class="nav-item" id="linkNavN3">
+          <a class="nav-link" href="#" number="3">About</a>
+        </li>
+        <li class="nav-item">
+          <button class="switch" id="switch">
+            <span><i class="fas fa-sun"></i></span>
+            <span><i class="fas fa-moon"></i></span>
+          </button>
+        </li>
+      </ul>
     </div>
-   
+  </nav>
+  <div id="carouselNivel" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active" id="cNivel1">
+        <div class="row py-5">
+          <div class="col-8" id="Grilla1"></div>
+          <div class="col-2" id="Palabras1"></div>
+        </div>
+        <div class="row justify-content-center" id="alert1">
+         
+        </div>
 
-    <!-- Optional JavaScript -->
-    
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="js/wordsearch.js"></script>
-    <script src="js/level.js"></script>
-    <script src="js/dataModel.js"></script>
-    <script src="js/htmlHandler.js"></script>
-    <script src="js/startGame.js"></script>
-    <script src="js/logic.js"></script>
-    <script src="js/bindListeners.js"></script>
-   
-  </body>
+      </div>
+      <div class="carousel-item" id="cNivel2">
+        <div class="row py-5">
+          <div class="col-8" id="Grilla2"></div>
+          <div class="col-2" id="Palabras2"></div>
+        </div>
+        <div class="row justify-content-center" id="alert2">
+         
+        </div>
+      </div>
+      <div class="carousel-item" id="cNivel3">
+        <div class="row py-5">
+          <div class="col-8" id="Grilla3"></div>
+          <div class="col-2" id="Palabras3"></div>
+        </div>
+      </div>
+      <div class="row justify-content-center" id="alert3">
+         
+      </div>
+      <div class="carousel-item" id="cNivelAbout">
+        <div class="row py-5">
+          <a>Creditos to my mom "<3" </a>
+              Iconos diseñados por <a href="https://www.flaticon.es/autores/smashicons"
+                title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.es/" title="Flaticon">
+                www.flaticon.es</a>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="js/wordsearch.js"></script>
+  <script src="js/level.js"></script>
+  <script src="js/dataModel.js"></script>
+  <script src="js/htmlHandler.js"></script>
+  <script src="js/startGame.js"></script>
+  <script src="js/logic.js"></script>
+  <script src="js/bindListeners.js"></script>
+
+</body>
 
 </html>

@@ -101,6 +101,17 @@ body.dark .cornerTopRight {
   border-radius: 3px;
 }
 
+.alert {
+  background-color: #f8f9fa;
+  border-color: rgba(16, 33, 39, 0.884);
+}
+
+body.dark .alert {
+  color: #ffdd0a;
+  background-color: rgba(16, 33, 39, 0.884);
+  border-color: #005C69;
+}
+
 li.disabled {
   text-decoration: line-through;
 }
@@ -218,7 +229,7 @@ a.carousel-control-next {
 }
 
 body.dark #found0 {
-  background-color: #28e276;
+  background-color: #28e275cc;
 }
 
 #found1 {
@@ -250,7 +261,7 @@ body.dark #found3 {
 }
 
 body.dark #found4 {
-  background-color: #F6AE2D;
+  background-color: rgba(246, 176, 45, 0.801);
 }
 
 #found5 {

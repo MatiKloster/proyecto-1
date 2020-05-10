@@ -130,7 +130,7 @@ let draftedWords=draftedWordsPerLevel[actualLevel];
     }
 
     if (draftedWords.length === 0) {
-      showSuccess();
+      showSuccess(actualLevel+1);
     }
   }
 
