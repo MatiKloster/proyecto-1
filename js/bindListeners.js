@@ -11,3 +11,5 @@ $('.carousel-control-prev').mousedown(prevCarousel);
 $('#carouselNivel').on('slid.bs.carousel', function (event){
     carouselChangeHandler(event);
 });
+var asd;
+var asdparteII;
