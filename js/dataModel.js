@@ -3,7 +3,7 @@
         'ciruela', 'kiwi', 'frutilla', 'sandia', 'cereza', 'pomelo',
         'arandano', 'fresa', 'melon', 'limon'];
     let posiblesPalabrasLevel2 = ['regla', 'clips', 'legajo', 'minuta',
-        'centro', 'sede', 'recibo', 'circular', 'anuario', 'ponelo',
+        'centro', 'sede', 'recibo', 'circular', 'anuario',
         'lapiz', 'mesa', 'ficha', 'fichero', 'lapiz', 'grapa', 'sueldo', 'horas', 'carpeta', 'folio', 'reunion', 'jefe'];
     let posiblesPalabrasLevel3 = ['papagaya', 'aplastada', 'harta', 'nalga',
         'masa', 'chapa', 'carpa', 'saldra', 'calla', 'rasca',
