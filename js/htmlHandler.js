@@ -1,3 +1,5 @@
+
+
 //there is 8 types of borders
 //4 for each side top bottom left right
 //and 4 for the corners, I make this distintion for the border-radius
@@ -127,3 +129,11 @@ var carouselChangeHandler=function(event){
   $(botonSelector).toggleClass('active');
   $("#carouselNivel").carousel("pause");
 };
+
+if(localStorage.getItem('Dark')==null){
+  localStorage.setItem('Dark','false'); 
+}else{
+ if(localStorage.getItem('Dark')==='true'){
+   toggleMode();
+ }
+}

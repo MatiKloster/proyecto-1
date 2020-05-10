@@ -9,4 +9,4 @@
         'masa', 'chapa', 'carpa', 'saldra', 'calla', 'rasca',
         'chacra', 'grasa', 'bala', 'balanza', 'trabaja', 'alza', 'halaga', 'mala', 'malla', 'maya',
         'vaya', 'valla', 'vaca', 'baraja', 'calma', 'playa', 'laja', 'barata'];
-    var levels=[new Level(posiblesPalabrasLevel1, 10, 10, 5, { backwards: 0 }),new Level(posiblesPalabrasLevel2, 12, 12, 7, { backwards: 0.3 }),new Level(posiblesPalabrasLevel3, 15, 15, 10, { letters: 'aaaaaaaaaaaaaaabcdefghijklmnopqrstuvwxyz'})];
+    var levels=[new Level(posiblesPalabrasLevel1, 10, 10, 5, { backwards: 0 }),new Level(posiblesPalabrasLevel2, 12, 12, 7, { backwards: 0.3 }),new Level(posiblesPalabrasLevel3, 15, 15, 10, { letters: 'aaaaaaaaaaaaaaaaaaaaaaaaaaabcdefghijklmnopqrstuvwxyz'})];

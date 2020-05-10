@@ -1,7 +1,8 @@
 
 // Game state
 var celdaInicial, celdasSeleccionadas = [], curOrientation, palabraActual = '';
-var wordCount = 0;
+
+var wordCount = [0,0,0];
 
 /**
 * Evento que se dispara cuando se clickea una celda nueva. Inicializa la potencial palabra
@@ -113,7 +114,7 @@ var contarCelda = function (celda) {
 *
 */
 var finalizaSeleccion = function () {
-
+let draftedWords=draftedWordsPerLevel[actualLevel];
   // see if we formed a valid word
   for (var i = 0; i < draftedWords.length; i++) {
     if (draftedWords[i] === palabraActual) {
@@ -122,9 +123,9 @@ var finalizaSeleccion = function () {
       draftedWords.splice(i, 1);
       hubo = true;
       celdasSeleccionadas.forEach(function (e) {
-        cambiarColor(e, wordCount);
+        cambiarColor(e, wordCount[actualLevel]);
       })
-      wordCount++;
+      wordCount[actualLevel]++;
 
     }
 
