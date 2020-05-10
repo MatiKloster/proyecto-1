@@ -131,7 +131,7 @@ var carouselChangeHandler=function(event){
 };
 
 if(localStorage.getItem('Dark')==null){
-  localStorage.setItem('Dark','false'); 
+  localStorage.setItem('Dark'); 
 }else{
  if(localStorage.getItem('Dark')==='true'){
    toggleMode();

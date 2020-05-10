@@ -6,8 +6,9 @@ $pIntenso: #3700B3;
 $pSuave:#BB86FC;
 $ButtonBackgroundColor:#f8f9fa;
 $colorPrueba:rgb(255, 224, 224);
+$colorLogo:#ffdd0a;
 $backlight:#CED097;
-$colorDark0:#023618;
+$colorDark0:#28e276;
 $colorDark1:#E54B4B;
 $colorDark2:#F56476;
 $colorDark3:#33658A;
@@ -127,7 +128,7 @@ body{
   transition: .3s ease all;
   &.dark{
     background: $colorLight5;
-    color:#ffdd0a;
+    color:$colorLogo;
     $borderColor:#005C69;
   }
 }

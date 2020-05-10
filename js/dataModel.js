@@ -4,7 +4,7 @@
         'arandano', 'fresa', 'melon', 'limon'];
     let posiblesPalabrasLevel2 = ['regla', 'clips', 'legajo', 'minuta',
         'centro', 'sede', 'recibo', 'circular', 'anuario',
-        'lapiz', 'mesa', 'ficha', 'fichero', 'lapiz', 'grapa', 'sueldo', 'horas', 'carpeta', 'folio', 'reunion', 'jefe'];
+        'lapiz', 'mesa', 'ficha', 'fichero', 'grapa', 'sueldo', 'horas', 'carpeta', 'folio', 'reunion', 'jefe'];
     let posiblesPalabrasLevel3 = ['papagaya', 'aplastada', 'harta', 'nalga',
         'masa', 'chapa', 'carpa', 'saldra', 'calla', 'rasca',
         'chacra', 'grasa', 'bala', 'balanza', 'trabaja', 'alza', 'halaga', 'mala', 'malla', 'maya',
