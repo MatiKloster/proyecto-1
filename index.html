@@ -44,35 +44,12 @@
       </ul>
     </div>
   </nav>
-  <!--<div class="carousel-item active" id="cNivel1">
-        <div class="row py-5 justify-content-center">
-          <div class="col-8">
-            <div class="alert alert-info alert-dismissible fade show" role="alert">
-              <h5 class="alert-heading">Facil / Reglas</h5>
-              <hr>
-              <p class="mb-0">-No hay palabras invertidas</p>
-              <p class="mb-0">-En el tiempo que tardaste en leer esto quizas ya la hubieras terminado</p>
-              <p class="mb-0">-Un minuto te sobra, ¿no?</p>
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-8" id="Grilla1"></div>
-          <div class="col-2" id="Palabras1"></div>
-        </div>
-        <div class="row py-5 justify-content-center" id="alert1">
 
-        </div>
-
-      </div>-->
   <div id="carouselNivel" class="carousel slide">
     <div class="carousel-inner">
       <div class="carousel-item active" id="cNivel1">
         <div class="row py-2 justify-content-center">
-          <div class="col-8 pl-5">
+          <div class="col-6">
             <div class="collapse" id="reglas1">
               <div class="alert alert-info" role="alert">
                 <h5 class="alert-heading">Nivel Facil</h5>
@@ -89,19 +66,21 @@
               aria-expanded="false" aria-controls="collapseExample">
               Reglas
             </button>
+            <button type="button" class="btn btn-outline-danger restart">Restart</button>
           </div>
         </div>
         <div class="row">
-          <div class="col-8" id="Grilla1"></div>
-          <div class="col-2" id="Palabras1"></div>
+          <div class="col-8" id="Grilla0"></div>
+          <div class="col-2" id="Palabras0"></div>
         </div>
-        <div class="row py-5 justify-content-center" id="alert1">
+        <div class="row py-5 justify-content-center" id="alert0">
 
         </div>
       </div>
+      
       <div class="carousel-item" id="cNivel2">
         <div class="row py-2 justify-content-center">
-          <div class="col-8 pl-5">
+          <div class="col-6">
             <div class="collapse" id="reglas2">
               <div class="alert alert-info" role="alert">
                 <h5 class="alert-heading">Nivel Medio</h5>
@@ -118,21 +97,22 @@
               aria-expanded="false" aria-controls="collapseExample">
               Reglas
             </button>
+            <button type="button" class="btn btn-outline-danger restart">Restart</button>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-8" id="Grilla2"></div>
-          <div class="col-2" id="Palabras2"></div>
+          <div class="col-8" id="Grilla1"></div>
+          <div class="col-2" id="Palabras1"></div>
         </div>
-        <div class="row py-5 justify-content-center" id="alert2">
+        <div class="row py-5 justify-content-center" id="alert1">
 
         </div>
       </div>
 
       <div class="carousel-item" id="cNivel3">
         <div class="row py-2 justify-content-center">
-          <div class="col-8 pl-5">
+          <div class="col-6">
             <div class="collapse" id="reglas3">
               <div class="alert alert-info" role="alert">
                 <h4 class="alert-heading">AAAAA </h4>
@@ -151,17 +131,19 @@
               aria-expanded="false" aria-controls="collapseExample">
               Reglas
             </button>
+            <button type="button" class="btn btn-outline-danger restart">Restart</button>
           </div>
         </div>
 
         <div class="row ">
-          <div class="col-8" id="Grilla3"></div>
-          <div class="col-2" id="Palabras3"></div>
+          <div class="col-8" id="Grilla2"></div>
+          <div class="col-2" id="Palabras2"></div>
+        </div>
+        <div class="row py-5 justify-content-center" id="alert2">
+
         </div>
       </div>
-      <div class="row py-5 justify-content-center" id="alert3">
-
-      </div>
+      
       <div class="carousel-item" id="cNivelAbout">
         <div class="row py-5">
           <a>Creditos to my mom "<3" </a>
@@ -198,8 +180,8 @@
   <script src="js/level.js"></script>
   <script src="js/dataModel.js"></script>
   <script src="js/htmlHandler.js"></script>
-  <script src="js/startGame.js"></script>
   <script src="js/logic.js"></script>
+  <script src="js/start.js"></script>
   <script src="js/bindListeners.js"></script>
 
 </body>

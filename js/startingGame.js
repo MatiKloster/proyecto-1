@@ -1,19 +1,8 @@
 /*
     Bind listeners e iniciar el juego
 */
-$(".restart").on('click', function(){
-    wordCount[actualLevel]=0;
-    delProp('.selected', 'selected');
-    celdaInicial = null;
-    celdasSeleccionadas = [];
-    palabraActual = '';
-    curOrientation = null;
-    var levelAux=makeLevelGreatAgain(actualLevel)
-    reStartLevel(levelAux,actualLevel);
-    $(".botonGrilla").mousedown(empiezaSeleccion);
-    $(".botonGrilla").mouseenter(mouseMove);
-    $(".botonGrilla").mouseup(finalizaSeleccion);  
-});
+
+
 $(".botonGrilla").mousedown(empiezaSeleccion);
 $(".botonGrilla").mouseenter(mouseMove);
 $(".botonGrilla").mouseup(finalizaSeleccion);
@@ -33,5 +22,5 @@ $('.carousel-control-prev').mousedown(prevCarousel);
 $('#carouselNivel').on('slid.bs.carousel', function (event){
     carouselChangeHandler(event);
 });
-
+$('btn.btn-outline-success.restart').mousedown(reStartLevel(makeLevelGreatAgain(actualLevel),actualLevel));
 

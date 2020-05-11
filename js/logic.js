@@ -108,9 +108,7 @@ var contarCelda = function (celda) {
 };
 
 /**
-* Event that handles mouse up on a square. Checks to see if a valid word
-* was created and updates the class of the letters and word if it was. Then
-* resets the game state to start a new word.
+  evento que maneja cuando el usuario termina la seleccion de una palabra
 *
 */
 var finalizaSeleccion = function () {
@@ -130,7 +128,7 @@ let draftedWords=draftedWordsPerLevel[actualLevel];
     }
 
     if (draftedWords.length === 0) {
-      showSuccess(actualLevel+1);
+      showSuccess(actualLevel);
     }
   }
 

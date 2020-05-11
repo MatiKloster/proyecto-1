@@ -3,14 +3,19 @@
   width: 30px;
   text-transform: uppercase;
   background-color: #f8f9fa;
-  font: 1em sans-serif;
+  outline: 0;
   border: none;
+  font: 1em sans-serif;
 }
 
 body.dark .botonGrilla {
   background: rgba(16, 33, 39, 0.884);
   color: #CED097;
   border-color: #3700B3;
+}
+
+.botonGrilla::-moz-focus-inner {
+  border: none;
 }
 
 .selected {
@@ -116,16 +121,20 @@ li.disabled {
   text-decoration: line-through;
 }
 
-.btn-outline-info {
+.btn-outline-info, .restart {
   background: #f8f9fa;
   border: 2px solid rgba(16, 33, 39, 0.884) !important;
   color: #222222;
 }
 
-body.dark .btn-outline-info {
+body.dark .btn-outline-info, body.dark .restart {
   background: rgba(16, 33, 39, 0.884);
   color: #CED097;
   border: 2px solid #005C69 !important;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
 }
 
 body {

@@ -42,10 +42,9 @@ class Level{
         var i=0;
         while(cant !== 0){ // mientras no haya elegido la cantidad de palabras que me pide el nivel
             pickedWord=palabras[i];
-            if((pickedWord!=null) && (Math.floor(Math.random()*10)<=5)){ //con una prob de 0.5 elijo una palabra
+            if(!toRet.includes(pickedWord) && (Math.floor(Math.random()*10)<=5)){ //con una prob de 0.5 elijo una palabra
                 toRet.push(pickedWord);
                 cant--;
-                palabras[i]=null;
                 i++;
             }
             i=(i<palabras.length-1)?i+1:0;//si llegue al final, vuelvo al principio

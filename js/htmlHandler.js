@@ -145,6 +145,10 @@ var showSuccesTimeOut=function(grid){
   html+='<span aria-hidden="true">&times;</span></button></div></div>'
   $(where).html(html);
 }
+var reStartLevel=function(newLevel,actualLevel){
+  dibujarGrilla(newLevel.grid,actualLevel)
+  dibujarPalabras(newLevel.draftedWords,actualLevel);
+}
 if(localStorage.getItem('Dark')==null){
   localStorage.setItem('Dark'); 
 }else{

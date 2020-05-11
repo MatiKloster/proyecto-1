@@ -38,14 +38,21 @@ $borderColorDark:#005C69;
     width: 30px;
     text-transform: uppercase;
     background-color: $ButtonBackgroundColor; 
+    outline:0; 
+    border:none;
     font: 1em sans-serif;
     body.dark &{
       background: $back;
     color: $backlight;
     border-color: $pIntenso;
     }
-    border:none;
 }
+
+
+.botonGrilla::-moz-focus-inner{
+    border: none
+  }
+
 .selected {
   background-color: $borderColor;
   body.dark &{
@@ -129,7 +136,7 @@ $borderColorDark:#005C69;
 li.disabled {
   text-decoration: line-through;
 }
-.btn-outline-info{
+.btn-outline-info,.restart{
   background: $test;
   border:2px solid $borderColor !important;
   color:$grisOcuro;
@@ -137,6 +144,7 @@ li.disabled {
     background: $back;
     color: $backlight;
     border:2px solid $borderColorDark !important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   }
 }
 body{
