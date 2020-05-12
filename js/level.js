@@ -18,12 +18,13 @@ function shuffle(array) {
   }
 class Level{
     
-    constructor(palabras,height,width,cant,opciones){
+    constructor(palabras,height,width,cant,opciones,tiempo){
         this.palabras=palabras;
         this.height=height;
         this.width=width;
         this.draftedWords=this.draftearPalabras(palabras,cant)
         this.grid=this.generarGrilla(this.draftedWords,height,width,opciones);
+        this.tiempo=tiempo;
     }
 
     generarGrilla(palabras,height,width,opciones){
@@ -51,5 +52,4 @@ class Level{
         }
         return toRet;
     }
-    
 }
