@@ -59,21 +59,26 @@
                 <p class="mb-0">-Un minuto te sobra, ¿no?</p>
               </div>
             </div>
-
           </div>
           <div class="col-2">
-            <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#reglas1"
-              aria-expanded="false" aria-controls="collapseExample">
-              Reglas
-            </button>
-            <button type="button" class="btn btn-outline-danger restart">Restart</button>
-            <button type="button" class="btn btn-outline-danger restart" id="startButton0">EMPEZAR</button>
+            <div class="row justify-content-center">
+              <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#reglas1"
+                aria-expanded="false" aria-controls="collapseExample">
+                Reglas
+              </button>
+              <button type="button" class="btn btn-outline-danger restart">Restart</button>
+            </div>
+
+            <div class="row pt-2 justify-content-center">
+              <button type="button" class="btn btn-outline-success start" id="startButton0">EMPEZAR</button>
+              <button type="button" class="btn btn-outline-warning disabled" id="resumeButton0" disabled>REANUDAR</button>
+            </div>
           </div>
         </div>
         <div class="row">
           <div class="col-8" id="Grilla0"></div>
           <div class="col-2" id="Palabras0"></div>
-          
+
         </div>
         <div class="row py-3 justify-content-center" id="alert0">
 
@@ -81,12 +86,13 @@
         <div class="row py-2 justify-content-center">
           <div class="col-6">
             <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%" id="barra1"></div>
+              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%" id="barra0"></div>
             </div>
           </div>
         </div>
       </div>
-      
+
       <div class="carousel-item" id="cNivel2">
         <div class="row py-2 justify-content-center">
           <div class="col-6">
@@ -102,19 +108,25 @@
 
           </div>
           <div class="col-2">
-            <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#reglas2"
-              aria-expanded="false" aria-controls="collapseExample">
-              Reglas
-            </button>
-            <button type="button" class="btn btn-outline-danger restart">Restart</button>
-            <button type="button" class="btn btn-outline-danger restart" id="startButton1">EMPEZAR</button>
+            <div class="row justify-content-center">
+              <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#reglas2"
+                aria-expanded="false" aria-controls="collapseExample">
+                Reglas
+              </button>
+              <button type="button" class="btn btn-outline-danger restart">Restart</button>
+            </div>
+
+            <div class="row pt-2 justify-content-center">
+              <button type="button" class="btn btn-outline-success start" id="startButton1">EMPEZAR</button>
+              <button type="button" class="btn btn-outline-warning disabled" id="resumeButton1" disabled>REANUDAR</button>
+            </div>
           </div>
         </div>
 
         <div class="row">
           <div class="col-8" id="Grilla1"></div>
           <div class="col-2" id="Palabras1"></div>
-          
+
         </div>
         <div class="row py-2 justify-content-center" id="alert1">
 
@@ -122,7 +134,8 @@
         <div class="row py-2 justify-content-center">
           <div class="col-6">
             <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%" id="barra1"></div>
             </div>
           </div>
         </div>
@@ -145,12 +158,18 @@
 
           </div>
           <div class="col-2">
-            <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#reglas3"
-              aria-expanded="false" aria-controls="collapseExample">
-              Reglas
-            </button>
-            <button type="button" class="btn btn-outline-danger restart">Restart</button>
-            <button type="button" class="btn btn-outline-danger restart" id="startButton2">EMPEZAR</button>
+            <div class="row justify-content-center">
+              <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#reglas3"
+                aria-expanded="false" aria-controls="collapseExample">
+                Reglas
+              </button>
+              <button type="button" class="btn btn-outline-danger restart">Restart</button>
+            </div>
+
+            <div class="row pt-2 justify-content-center">
+              <button type="button" class="btn btn-outline-success start" id="startButton2">EMPEZAR</button>
+              <button type="button" class="btn btn-outline-warning disabled" id="resumeButton2" disabled>REANUDAR</button>
+            </div>
           </div>
         </div>
 
@@ -161,16 +180,17 @@
 
           </div>
         </div>
-        
+
         <div class="row py-2 justify-content-center">
           <div class="col-6">
             <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%" id="barra2"></div>
             </div>
           </div>
         </div>
       </div>
-      
+
       <div class="carousel-item" id="cNivelAbout">
         <div class="row py-5">
           <a>Creditos to my mom "<3" </a>
@@ -210,7 +230,7 @@
   <script src="js/logic.js"></script>
   <script src="js/start.js"></script>
   <script src="js/bindListeners.js"></script>
-  
+
 
 </body>
 

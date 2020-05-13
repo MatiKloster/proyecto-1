@@ -33,7 +33,7 @@ $backdark:$colorLight7;
 $borderColor:$back;
 $borderPixel:3px;
 $borderColorDark:#005C69;
-$posibleColorProgressBar:#0bd815;
+$posibleColorProgressBar:#a31621;
 $posibleColorProgressBar2:#eccf11;
 .botonGrilla{
     height: 30px;
@@ -138,7 +138,7 @@ $posibleColorProgressBar2:#eccf11;
 li.disabled {
   text-decoration: line-through;
 }
-.btn-outline-info,.restart{
+.btn-outline-info,.restart,.btn-outline-success, .btn-outline-warning{
   background: $test;
   border:2px solid $borderColor !important;
   color:$grisOcuro;
@@ -149,11 +149,19 @@ li.disabled {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   }
 }
+.btn-outline-warning.disabled{
+  color:$grisOcuro;
+  background: $test;
+}
+.btn-outline-success.disabled{
+  color:$grisOcuro;
+  background: $test;
+}
 .bg-success{
   background-color:$posibleColorProgressBar2 !important;
-  body.dark &{
-    background-color:$posibleColorProgressBar2!important;
-  }
+}
+.bg-danger{
+  background-color:$posibleColorProgressBar !important;
 }
 body{
   background: $backlight;

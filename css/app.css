@@ -121,13 +121,13 @@ li.disabled {
   text-decoration: line-through;
 }
 
-.btn-outline-info, .restart {
+.btn-outline-info, .restart, .btn-outline-success, .btn-outline-warning {
   background: #f8f9fa;
   border: 2px solid rgba(16, 33, 39, 0.884) !important;
   color: #222222;
 }
 
-body.dark .btn-outline-info, body.dark .restart {
+body.dark .btn-outline-info, body.dark .restart, body.dark .btn-outline-success, body.dark .btn-outline-warning {
   background: rgba(16, 33, 39, 0.884);
   color: #CED097;
   border: 2px solid #005C69 !important;
@@ -137,12 +137,22 @@ body.dark .btn-outline-info, body.dark .restart {
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
 }
 
+.btn-outline-warning.disabled {
+  color: #222222;
+  background: #f8f9fa;
+}
+
+.btn-outline-success.disabled {
+  color: #222222;
+  background: #f8f9fa;
+}
+
 .bg-success {
   background-color: #eccf11 !important;
 }
 
-body.dark .bg-success {
-  background-color: #eccf11 !important;
+.bg-danger {
+  background-color: #a31621 !important;
 }
 
 body {

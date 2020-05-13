@@ -93,6 +93,10 @@ var getAtributo = function (clase, atributo) {
 var delProp = function (clase, prop) {
   $(clase).removeClass(prop);
 }
+var toggleProp=function(clase,esta,poresta){
+  delProp(clase,esta);
+  agregarProp(clase,poresta);
+}
 var seleccionarPalabra = function (palabra) {
   var palabraID = '#' + palabra;
   $(palabraID).toggleClass('list-group-item list-group-item disabled');
@@ -151,15 +155,41 @@ var showSuccesTimeOut = function (grid) {
   html += '<span aria-hidden="true">&times;</span></button></div></div>'
   $(where).html(html);
 }
+var mostrarBarra=function(level){
+  let which='#barra'+level;
+  $(which).show();
+};
 var startUIlevel = function (newLevel, actualLevel) {
   dibujarGrilla(newLevel.grid, actualLevel)
   dibujarPalabras(newLevel.draftedWords, actualLevel);
+  mostrarBarra(actualLevel);
 }
-var aumentarProgressBar = function () {
-  progress++;
-  $('#barra1').css('width', progress + '%').attr('aria-valuenow', progress);
+var cambiarColorProgressBar=function(level){
+  let which='#barra'+level;
+  toggleProp(which,'bg-danger','bg-success')
 
 }
+var aumentarProgressBar = function (level) {
+  let which='#barra'+level;
+  if(progress<100)
+    progress++;
+    $(which).css('width', progress + '%').attr('aria-valuenow', progress);
+    if(progress==100){
+      toggleProp(which,'bg-success','bg-danger');
+  }
+
+}
+var ponerBotonPausa=function(button){
+  pauseStr='pauseButton'+actualLevel;
+  toggleProp(button,'start',pauseStr);
+  let pauseToRet='#'+pauseStr;
+  $(button).attr('id',pauseStr);
+  $(pauseToRet).html('Pausa');
+}
+var onOffbutton=function(button){
+  $(button).toggleClass('disabled');
+  ($(button).prop('disabled'))?$(button).prop('disabled',false):$(button).prop('disabled',true);
+};
 function getScriptPath(foo) { return window.URL.createObjectURL(new Blob([foo.toString().match(/^\s*function\s*\(\s*\)\s*\{(([\s\S](?!\}$))*[\s\S])/)[1]], { type: 'text/javascript' })); }
 var createTheWorker = function (level) {
   worker = new Worker(getScriptPath(function () {
@@ -183,7 +213,7 @@ var createTheWorker = function (level) {
       , false);
   }));
   worker.addEventListener('message', function (event) {
-    aumentarProgressBar();
+    aumentarProgressBar(actualLevel);
   });
   worker.addEventListener('error', function (event) {
     console.error('error received from worker => ', event);
@@ -197,3 +227,4 @@ if (localStorage.getItem('Dark') == null) {
     toggleMode();
   }
 }
+

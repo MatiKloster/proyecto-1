@@ -3,24 +3,67 @@
 */
 var actualLevel;
 var startingLevel=function(level){
-    wordCount[level]=0;
+    actualLevel=level;
+    wordCount[actualLevel]=0;
     delProp('.selected', 'selected');
     celdaInicial = null;
     celdasSeleccionadas = [];
     palabraActual = '';
     curOrientation = null;
-    var levelAux=makeLevelGreatAgain(level)
-    startUIlevel(levelAux,level);
+    var levelAux=makeLevelGreatAgain(actualLevel)
+    startUIlevel(levelAux,actualLevel);
     $(".botonGrilla").mousedown(empiezaSeleccion);
     $(".botonGrilla").mouseenter(mouseMove);
     $(".botonGrilla").mouseup(finalizaSeleccion);
-    actualLevel=level;
     progress=0;
+    cambiarColorProgressBar(actualLevel);
     createTheWorker(actualLevel);
 };
-$('#startButton0').on('click',function(){startingLevel(0)});
-$('#startButton1').on('click',function(){startingLevel(1)});
-$('#startButton2').on('click',function(){startingLevel(2)});
+
+$('#startButton0').on('click',function(){
+    startingLevel(0);
+    $('#startButton0').off('click');
+    ponerBotonPausa('#startButton0');
+    $('#pauseButton0').on('click',function(){
+        worker.terminate();
+        onOffbutton('#pauseButton0');
+        onOffbutton('#resumeButton0');
+    });
+
+});
+$('#startButton1').on('click',function(){
+    startingLevel(1);
+    ponerBotonPausa('#startButton1');
+    $('#pauseButton1').on('click',function(){
+        worker.terminate();
+        onOffbutton('#pauseButton1');
+        onOffbutton('#resumeButton1');
+    });
+});
+$('#startButton2').on('click',function(){
+    startingLevel(2);
+    ponerBotonPausa('#startButton2');
+    $('#pauseButton2').on('click',function(){
+        worker.terminate();
+        onOffbutton('#pauseButton2');
+        onOffbutton('#resumeButton2');
+    });
+});
+$('#resumeButton0').on('click',function(){
+    createTheWorker(actualLevel);
+    onOffbutton('#pauseButton0');
+    onOffbutton('#resumeButton0');
+});
+$('#resumeButton1').on('click',function(){
+    createTheWorker(actualLevel);
+    onOffbutton('#pauseButton1');
+    onOffbutton('#resumeButton1');
+});
+$('#resumeButton2').on('click',function(){
+    createTheWorker(actualLevel);
+    onOffbutton('#pauseButton2');
+    onOffbutton('#resumeButton2');
+});
 $(".restart").on('click', function(){
     worker.terminate();
     startingLevel(actualLevel);
@@ -41,4 +84,4 @@ $('.carousel-control-prev').mousedown(prevCarousel);
 $('#carouselNivel').on('slid.bs.carousel', function (event){
     carouselChangeHandler(event);
 });
-;
+
