@@ -136,16 +136,28 @@ var carouselChangeHandler = function (event) {
   $("#carouselNivel").carousel("pause");
 };
 var showSuccess = function (grid) {
+  worker.terminate();
   let segundos=(levels[actualLevel].tiempo * progress)/100;
   let where = '#alert' + grid;
-  let html = '<div class="col-8" ><div class="alert alert-success alert-dismissible fade show" role="alert">'
-  html += '<strong>Ganaste!</strong> Y solo lo hiciste en ' + Math.floor(segundos/60) + ':' + Math.floor(segundos%60) + '. Volvé cuando quieras!'
+  let html;
+  if(progress>=100){
+    html= '<div class="col-8" ><div class="alert alert-warning alert-dismissible fade show" role="alert">'
+  html += '<strong>Terminaste!</strong> Y solo lo hiciste en ' + Math.floor(segundos/60) + ':' + Math.floor(segundos%60) + '. No estas dentro del rango ganador, probá una vez mas!'
   html += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'
   html += '<span aria-hidden="true">&times;</span></button></div></div>'
+  }
+  else{
+    html= '<div class="col-8" ><div class="alert alert-success alert-dismissible fade show" role="alert">'
+    html += '<strong>Ganaste!</strong> Y solo lo hiciste en ' + Math.floor(segundos/60) + ':' + Math.floor(segundos%60) + '. Volvé cuando quieras!'
+    html += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'
+    html += '<span aria-hidden="true">&times;</span></button></div></div>'
+  }
+ 
+  
   $(where).html(html);
 }
 var showSuccesTimeOut = function (grid) {
-  worker.terminate();
+  
   endTimer = new Date();
   let seconds = (endTimer - startTimer) / 1000;
   let minutes = ms / 60;
