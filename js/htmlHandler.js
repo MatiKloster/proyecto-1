@@ -52,10 +52,10 @@ function getBorderIndicator(j, i, boundx, boundy) {
 var dibujarGrilla = function (puzzle, grilla) {
   let str = '#Grilla' + grilla;
   let borderIndicator;
-  var output = '';
+  var output = '<div class="row justify-content-center"><img src="img/yisus.jpg" id="troll" hidden></div></div>';
   for (var i = 0, height = puzzle.length; i < height; i++) {
     var row = puzzle[i];
-    output += '<div class="row justify-content-center">';
+    output += '<div class="row justify-content-center hiddeable">';
     for (var j = 0, width = row.length; j < width; j++) {
       borderIndicator = getBorderIndicator(j, i, row.length, puzzle.length);//
       output += '<div class="cols-2">';
@@ -155,14 +155,14 @@ var showSuccesTimeOut = function (grid) {
   html += '<span aria-hidden="true">&times;</span></button></div></div>'
   $(where).html(html);
 }
-var mostrarBarra=function(level){
-  let which='#barra'+level;
-  $(which).show();
+var mostrarUI=function(level){
+ let cuales='.'+level;
+  $(cuales).prop('hidden',false);
 };
 var startUIlevel = function (newLevel, actualLevel) {
   dibujarGrilla(newLevel.grid, actualLevel)
   dibujarPalabras(newLevel.draftedWords, actualLevel);
-  mostrarBarra(actualLevel);
+  mostrarUI(actualLevel);
 }
 var cambiarColorProgressBar=function(level){
   let which='#barra'+level;
@@ -190,6 +190,10 @@ var onOffbutton=function(button){
   $(button).toggleClass('disabled');
   ($(button).prop('disabled'))?$(button).prop('disabled',false):$(button).prop('disabled',true);
 };
+var trollear=function(cristo){
+  $('#troll').prop('hidden',!cristo);
+  $('.hiddeable').prop('hidden',cristo);
+}
 function getScriptPath(foo) { return window.URL.createObjectURL(new Blob([foo.toString().match(/^\s*function\s*\(\s*\)\s*\{(([\s\S](?!\}$))*[\s\S])/)[1]], { type: 'text/javascript' })); }
 var createTheWorker = function (level) {
   worker = new Worker(getScriptPath(function () {
@@ -227,4 +231,10 @@ if (localStorage.getItem('Dark') == null) {
     toggleMode();
   }
 }
+if(!($('#resumeButton0').prop('disabled')))
+  $('#resumeButton0').prop('disabled',true);
+if(!($('#resumeButton1').prop('disabled')))
+  $('#resumeButton1').prop('disabled',true);
+if(!($('#resumeButton2').prop('disabled')))
+  $('#resumeButton2').prop('disabled',true);
 

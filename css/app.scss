@@ -149,7 +149,7 @@ li.disabled {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   }
 }
-.btn-outline-warning.disabled{
+.btn-outline-warning.disabled, .btn-outline-warning:disabled{
   color:$grisOcuro;
   background: $test;
 }
@@ -157,6 +157,11 @@ li.disabled {
   color:$grisOcuro;
   background: $test;
 }
+.btn-outline-danger.disabled{
+  color:$grisOcuro;
+  background: $test;
+}
+
 .bg-success{
   background-color:$posibleColorProgressBar2 !important;
 }

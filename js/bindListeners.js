@@ -28,41 +28,55 @@ $('#startButton0').on('click',function(){
         worker.terminate();
         onOffbutton('#pauseButton0');
         onOffbutton('#resumeButton0');
+        onOffbutton('.restart.0');
+        trollear(true);
     });
 
 });
 $('#startButton1').on('click',function(){
     startingLevel(1);
+    $('#startButton1').off('click');
     ponerBotonPausa('#startButton1');
     $('#pauseButton1').on('click',function(){
         worker.terminate();
         onOffbutton('#pauseButton1');
         onOffbutton('#resumeButton1');
+        onOffbutton('.restart.1');
+        trollear(true);
     });
 });
 $('#startButton2').on('click',function(){
     startingLevel(2);
+    $('#startButton2').off('click');
     ponerBotonPausa('#startButton2');
     $('#pauseButton2').on('click',function(){
         worker.terminate();
         onOffbutton('#pauseButton2');
         onOffbutton('#resumeButton2');
+        onOffbutton('.restart.2');
+        trollear(true);
     });
 });
 $('#resumeButton0').on('click',function(){
     createTheWorker(actualLevel);
     onOffbutton('#pauseButton0');
     onOffbutton('#resumeButton0');
+    onOffbutton('.restart.0');
+    trollear(false);
 });
 $('#resumeButton1').on('click',function(){
     createTheWorker(actualLevel);
     onOffbutton('#pauseButton1');
     onOffbutton('#resumeButton1');
+    onOffbutton('.restart.1');
+    trollear(false);
 });
 $('#resumeButton2').on('click',function(){
     createTheWorker(actualLevel);
     onOffbutton('#pauseButton2');
     onOffbutton('#resumeButton2');
+    onOffbutton('.restart.2');
+    trollear(false);
 });
 $(".restart").on('click', function(){
     worker.terminate();
