@@ -51,8 +51,9 @@ function getBorderIndicator(j, i, boundx, boundy) {
 }
 var dibujarGrilla = function (puzzle, grilla) {
   let str = '#Grilla' + grilla;
+  let yisusStr='troll'+grilla;
   let borderIndicator;
-  var output = '<div class="row justify-content-center"><img src="img/yisus.jpg" id="troll" hidden></div></div>';
+  var output = '<div class="row justify-content-center"><img src="img/yisus.jpg" id="'+yisusStr+'" hidden></div></div>';
   for (var i = 0, height = puzzle.length; i < height; i++) {
     var row = puzzle[i];
     output += '<div class="row justify-content-center hiddeable">';
@@ -191,7 +192,8 @@ var onOffbutton=function(button){
   ($(button).prop('disabled'))?$(button).prop('disabled',false):$(button).prop('disabled',true);
 };
 var trollear=function(cristo){
-  $('#troll').prop('hidden',!cristo);
+  let yisusStr='#troll'+actualLevel;
+  $(yisusStr).prop('hidden',!cristo);
   $('.hiddeable').prop('hidden',cristo);
 }
 function getScriptPath(foo) { return window.URL.createObjectURL(new Blob([foo.toString().match(/^\s*function\s*\(\s*\)\s*\{(([\s\S](?!\}$))*[\s\S])/)[1]], { type: 'text/javascript' })); }
