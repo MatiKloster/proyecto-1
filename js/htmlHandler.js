@@ -51,12 +51,14 @@ function getBorderIndicator(j, i, boundx, boundy) {
 }
 var dibujarGrilla = function (puzzle, grilla) {
   let str = '#Grilla' + grilla;
-  let yisusStr='troll'+grilla;
+  let hiddeable = 'hiddeable' + grilla;
   let borderIndicator;
-  var output = '<div class="row justify-content-center"><img src="img/yisus.jpg" id="'+yisusStr+'" hidden></div></div>';
+  let yisusStr = 'troll' + grilla;
+  let randomPic = (Math.random() >= 0.5) ? 'yisus' : 'roll';
+  var output = '<div class="row justify-content-center"><img src="img/' + randomPic + '.jpg" id="' + yisusStr + '" hidden></div></div>';
   for (var i = 0, height = puzzle.length; i < height; i++) {
     var row = puzzle[i];
-    output += '<div class="row justify-content-center hiddeable">';
+    output += '<div class="row justify-content-center ' + hiddeable + '">';
     for (var j = 0, width = row.length; j < width; j++) {
       borderIndicator = getBorderIndicator(j, i, row.length, puzzle.length);//
       output += '<div class="cols-2">';
@@ -93,9 +95,9 @@ var getAtributo = function (clase, atributo) {
 var delProp = function (clase, prop) {
   $(clase).removeClass(prop);
 }
-var toggleProp=function(clase,esta,poresta){
-  delProp(clase,esta);
-  agregarProp(clase,poresta);
+var toggleProp = function (clase, esta, poresta) {
+  delProp(clase, esta);
+  agregarProp(clase, poresta);
 }
 var seleccionarPalabra = function (palabra) {
   var palabraID = '#' + palabra;
@@ -136,76 +138,67 @@ var carouselChangeHandler = function (event) {
 };
 var showSuccess = function (grid) {
   worker.terminate();
-  let segundos=(levels[actualLevel].tiempo * progress)/100;
+  let pauseBut = '#pauseButton' + grid;
+  onOffbutton(pauseBut);
+  let segundos = (levels[actualLevel].tiempo * progress) / 100;
   let where = '#alert' + grid;
   let html;
-  if(progress>=100){
-    html= '<div class="col-8" ><div class="alert alert-warning alert-dismissible fade show" role="alert">'
-  html += '<strong>Terminaste!</strong> Pero bueno... en ' + Math.floor(segundos/60) + ':' + Math.floor(segundos%60) + ' . No estas dentro del rango ganador, probá una vez mas!'
-  html += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'
-  html += '<span aria-hidden="true">&times;</span></button></div></div>'
-  }
-  else{
-    html= '<div class="col-8" ><div class="alert alert-success alert-dismissible fade show" role="alert">'
-    html += '<strong>Ganaste!</strong> Y solo lo hiciste en ' + Math.floor(segundos/60) + ':' + Math.floor(segundos%60) + '. Volvé cuando quieras!'
+  if (progress >= 100) {
+    html = '<div class="col-8" ><div class="alert alert-warning alert-dismissible fade show" role="alert">'
+    html += '<strong>Terminaste!</strong> Pero bueno... en ' + Math.floor(segundos / 60) + ':' + Math.floor(segundos % 60) + ' . No estas dentro del rango ganador, probá una vez mas!'
     html += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'
     html += '<span aria-hidden="true">&times;</span></button></div></div>'
   }
- 
-  
+  else {
+    html = '<div class="col-8" ><div class="alert alert-success alert-dismissible fade show" role="alert">'
+    html += '<strong>Ganaste!</strong> Y solo lo hiciste en ' + Math.floor(segundos / 60) + ':' + Math.floor(segundos % 60) + '. Volvé cuando quieras!'
+    html += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'
+    html += '<span aria-hidden="true">&times;</span></button></div></div>'
+  }
   $(where).html(html);
 }
-var showSuccesTimeOut = function (grid) {
-  
-  endTimer = new Date();
-  let seconds = (endTimer - startTimer) / 1000;
-  let minutes = ms / 60;
-  let where = '#alert' + grid;
-  let html = '<div class="col-8" ><div class="alert alert-success alert-dismissible fade show" role="alert">'
-  html += '<strong>Ganaste!</strong> Y solo lo hiciste en ' + minutes + ':' + seconds + '. Volvé cuando quieras!'
-  html += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'
-  html += '<span aria-hidden="true">&times;</span></button></div></div>'
-  $(where).html(html);
-}
-var mostrarUI=function(level){
- let cuales='.'+level;
-  $(cuales).prop('hidden',false);
+var mostrarUI = function (level) {
+  let cuales = '.' + level;
+  $(cuales).prop('hidden', false);
 };
 var startUIlevel = function (newLevel, actualLevel) {
   dibujarGrilla(newLevel.grid, actualLevel)
   dibujarPalabras(newLevel.draftedWords, actualLevel);
   mostrarUI(actualLevel);
 }
-var cambiarColorProgressBar=function(level){
-  let which='#barra'+level;
-  toggleProp(which,'bg-danger','bg-success')
+var cambiarColorProgressBar = function (level) {
+  let which = '#barra' + level;
+  toggleProp(which, 'bg-danger', 'bg-success')
 
 }
 var aumentarProgressBar = function (level) {
-  let which='#barra'+level;
-  progress++;
-  if(progress<=100)
-    $(which).css('width', progress + '%').attr('aria-valuenow', progress);
-    if(progress==100){
-      toggleProp(which,'bg-success','bg-danger');
+  let pausaOn = '#pauseButton' + level;
+  if (!($(pausaOn).prop('disabled'))) {
+    let which = '#barra' + level;
+    progress++;
+    if (progress <= 100)
+      $(which).css('width', progress + '%').attr('aria-valuenow', progress);
+    if (progress == 100) {
+      toggleProp(which, 'bg-success', 'bg-danger');
+    }
   }
-
 }
-var ponerBotonPausa=function(button){
-  pauseStr='pauseButton'+actualLevel;
-  toggleProp(button,'start',pauseStr);
-  let pauseToRet='#'+pauseStr;
-  $(button).attr('id',pauseStr);
+var ponerBotonPausa = function (button) {
+  pauseStr = 'pauseButton' + actualLevel;
+  toggleProp(button, 'start', pauseStr);
+  let pauseToRet = '#' + pauseStr;
+  $(button).attr('id', pauseStr);
   $(pauseToRet).html('PAUSA');
 }
-var onOffbutton=function(button){
+var onOffbutton = function (button) {
   $(button).toggleClass('disabled');
-  ($(button).prop('disabled'))?$(button).prop('disabled',false):$(button).prop('disabled',true);
+  ($(button).prop('disabled')) ? $(button).prop('disabled', false) : $(button).prop('disabled', true);
 };
-var trollear=function(cristo){
-  let yisusStr='#troll'+actualLevel;
-  $(yisusStr).prop('hidden',!cristo);
-  $('.hiddeable').prop('hidden',cristo);
+var trollear = function (cristo) {
+  let yisusStr = '#troll' + actualLevel;
+  $(yisusStr).prop('hidden', !cristo);
+  let hiddeable = '.hiddeable' + actualLevel;
+  $(hiddeable).prop('hidden', cristo);
 }
 function getScriptPath(foo) { return window.URL.createObjectURL(new Blob([foo.toString().match(/^\s*function\s*\(\s*\)\s*\{(([\s\S](?!\}$))*[\s\S])/)[1]], { type: 'text/javascript' })); }
 var createTheWorker = function (level) {
@@ -221,10 +214,11 @@ var createTheWorker = function (level) {
         } while (timeDiff < time);
       };
       let rate = (e.data == 0) ? 600 : (e.data == 1) ? 1800 : 3600;
-                      //pongo limite de 5000 para generar un ciclo infinito. Es problable que se va a cortar antes
+      let toRet = (e.data == 0) ? 'add0' : (e.data == 1) ? 'add1' : 'add2';
+      //pongo limite de 5000 para generar un ciclo infinito. Es problable que se va a cortar antes
       for (var i = 0; i <= 5000; i++) {
         sleep(rate);
-        self.postMessage('add');
+        self.postMessage(toRet);
       }
     }
       , false);
@@ -244,10 +238,10 @@ if (localStorage.getItem('Dark') == null) {
     toggleMode();
   }
 }
-if(!($('#resumeButton0').prop('disabled')))
-  $('#resumeButton0').prop('disabled',true);
-if(!($('#resumeButton1').prop('disabled')))
-  $('#resumeButton1').prop('disabled',true);
-if(!($('#resumeButton2').prop('disabled')))
-  $('#resumeButton2').prop('disabled',true);
-  cambiarCarousel('4');
+if (!($('#resumeButton0').prop('disabled')))
+  $('#resumeButton0').prop('disabled', true);
+if (!($('#resumeButton1').prop('disabled')))
+  $('#resumeButton1').prop('disabled', true);
+if (!($('#resumeButton2').prop('disabled')))
+  $('#resumeButton2').prop('disabled', true);
+cambiarCarousel('4');
