@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainNav">
     <a class="navbar-brand" href="#">
       <img src="svg/sopaBlack.svg" width="30" height="30" id="brandsvg" class="d-inline-block align-top" alt="">
       Sotra de Lepas
@@ -23,8 +23,10 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active" id="linkNavN0">
-          <a class="nav-link" href="#" number="0">Facil<span class="sr-only">(current)</span></a>
+
+        <li class="nav-item " id="linkNavN0">
+          <a class="nav-link" href="#" number="0">Facil
+            <!--<span class="sr-only">(current)</span>--></a>
         </li>
         <li class="nav-item" id="linkNavN1">
           <a class="nav-link" href="#" number="1">Medio</a>
@@ -35,6 +37,9 @@
         <li class="nav-item" id="linkNavN3">
           <a class="nav-link" href="#" number="3">About</a>
         </li>
+        <li class="nav-item active" id="linkNavN4">
+          <a class="nav-link" href="#" number="4">Inicio<span class="sr-only">(current)</span></a>
+        </li>
         <li class="nav-item">
           <button class="switch" id="switch">
             <span><i class="fas fa-sun"></i></span>
@@ -44,7 +49,6 @@
       </ul>
     </div>
   </nav>
-
   <div id="carouselNivel" class="carousel slide">
     <div class="carousel-inner">
       <div class="carousel-item active" id="cNivel1">
@@ -66,11 +70,11 @@
                 aria-expanded="false" aria-controls="collapseExample">
                 Reglas
               </button>
-              <button type="button" class="btn btn-outline-danger restart 0" hidden>Restart</button>
+              <button type="button" class="btn btn-outline-danger restart 0" hidden>RESTART</button>
             </div>
 
             <div class="row pt-2 justify-content-center">
-              <button type="button" class="btn btn-outline-success start" id="startButton0">EMPEZAR</button>
+              <button type="button" class="btn btn-outline-success start" id="startButton0">►</button>
               <button type="button" class="btn btn-outline-warning disabled 0" id="resumeButton0"
                 hidden>REANUDAR</button>
             </div>
@@ -115,11 +119,10 @@
                 aria-expanded="false" aria-controls="collapseExample">
                 Reglas
               </button>
-              <button type="button" class="btn btn-outline-danger restart 1" hidden>Restart</button>
+              <button type="button" class="btn btn-outline-danger restart 1" hidden>RESTART</button>
             </div>
-
             <div class="row pt-2 justify-content-center">
-              <button type="button" class="btn btn-outline-success start" id="startButton1">EMPEZAR</button>
+              <button type="button" class="btn btn-outline-success start" id="startButton1">►</button>
               <button type="button" class="btn btn-outline-warning disabled 1" id="resumeButton1"
                 hidden>REANUDAR</button>
             </div>
@@ -166,13 +169,13 @@
                 aria-expanded="false" aria-controls="collapseExample">
                 Reglas
               </button>
-              <button type="button" class="btn btn-outline-danger restart 2" hidden>Restart</button>
+              <button type="button" class="btn btn-outline-danger restart 2" hidden>RESTART</button>
             </div>
 
             <div class="row pt-2 justify-content-center">
-              <button type="button" class="btn btn-outline-success start" id="startButton2">EMPEZAR</button>
+              <button type="button" class="btn btn-outline-success start" id="startButton2">►</button>
               <button type="button" class="btn btn-outline-warning disabled 2" id="resumeButton2"
-                hidden>REANUDAR</button>
+                hidden>REAUNUDAR</button>
             </div>
           </div>
         </div>
@@ -213,11 +216,72 @@
             <h5 class="alert-heading">Creditos</h5>
             <hr>
             <p class="mb-0">Sobre todo, a mi madre, por tener la tremenda idea</p>
-            <p class="mb-0">I'd like to thank Dave Eddy <dave@daveeddy.com> since I use his wordsearch service for creating the Grid</p>
-            <p class="mb-0">The service is: <a href="https://github.com/bahamas10/wordsearch.js" title="code"> Right Here</a></p>
+            <p class="mb-0">I'd like to thank Dave Eddy <dave@daveeddy.com> since I use his wordsearch service for
+                creating the Grid</p>
+            <p class="mb-0">The service is: <a href="https://github.com/bahamas10/wordsearch.js" title="code"> Right
+                Here</a></p>
             <p class="mb-0">Iconos diseñados por <a href="https://www.flaticon.es/autores/smashicons"
-              title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.es/" title="Flaticon">
-              www.flaticon.es</a></p>
+                title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.es/" title="Flaticon">
+                www.flaticon.es</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" id="cNivelInicio">
+        <div class="row py-2 justify-content-center">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#exampleModalCenter">
+            Clickea aca si no entendes nada
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title" id="exampleModalLongTitle">Bienvenido!</h2>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <ul class="list-unstyled">
+                    <li>No muchas cosas que explicar, ¿no? Una simple página que te deja
+                      jugar a la sopa de letras. Ahora te cierra el título?</li>
+                    <li>La idea es que en cada nivel vayas encontrando las palabras</li>
+                    <li>que se esconden en la grilla dentro del tiempo puesto en las reglas. Igual... quedate tranquilo!
+                      No te voy a cortar la diversión si no llegas.</li>
+                    <li>Las reglas de cada nivel estan dentro de cada nivel clickeando
+                      el boton "Reglas".</li>
+                      <li>El boton mágico: <p><strong>► </strong></p>te va a permitir arrancar el nivel. Pero CUIDADO! el contador arranca
+                         enseguida. Mi recomendación es que leas las reglas asi arrancas preparado.</li>
+                    <li>El boton PAUSA va a frenar el tiempo para que puedas continuar
+                      tu nivel tranquilo.</li>
+                    <li> La idea es que lo uses a conciencia y no intentes buscar las palabras con el tiempo frenado.</li>
+                    <li>
+                      <p><strong>Realmente está fácil hacer trampa ahora que lo pienso :(</strong></p>
+                    </li>
+                    <li>Si aprietas PAUSA, ademas de encontrarte con un personaje de aquellos, se
+                      activará el boton REAUNUDAR, que... bueno... reanuda el timer y el juego en donde lo habias dejado
+                    </li>
+                    <li>Si la ves jodida o simplemente no te gustaron las palabras, sentite
+                      libre de apretar RESTART.</li>
+                    <li>
+                      <----- A tu izquierda vas a empezar por los niveles mas dificiles</li>
+                    <li>A tu derecha vas a empezar por los mas faciles ----------------></li>
+                    <li>Tenes a tu disposición un hermoso Dark mode por si te molestan
+                      las paginas muy claras.</li>
+                    <li>
+                      <h4><strong>GRACIAS!</strong></h4>
+                    </li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Entiendo menos que antes</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Este boton tambien cierra</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -106,12 +106,12 @@ body.dark .cornerTopRight {
   border-radius: 3px;
 }
 
-.alert {
+.alert, .modal-content {
   background-color: #f8f9fa;
   border-color: rgba(16, 33, 39, 0.884);
 }
 
-body.dark .alert {
+body.dark .alert, body.dark .modal-content {
   color: #ffdd0a;
   background-color: rgba(16, 33, 39, 0.884);
   border-color: #005C69;

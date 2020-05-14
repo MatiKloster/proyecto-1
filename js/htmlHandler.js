@@ -68,7 +68,6 @@ var dibujarGrilla = function (puzzle, grilla) {
   }
   $(str).html(output);
 };
-
 var dibujarPalabras = function (palabras, grilla) {
   let str = '#Palabras' + grilla;
   var palabraMayus;
@@ -117,13 +116,13 @@ var cambiarCarousel = function (to) {
 var prevCarousel = function () {
   $("#carouselNivel").carousel("prev");
   if (actualLevel == 0)
-    actualLevel = 3;
+    actualLevel = 4;
   else
     actualLevel--;
 };
 var nextCarousel = function () {
   $("#carouselNivel").carousel("next");
-  if (actualLevel == 3)
+  if (actualLevel == 4)
     actualLevel = 0;
   else
     actualLevel++;
@@ -142,7 +141,7 @@ var showSuccess = function (grid) {
   let html;
   if(progress>=100){
     html= '<div class="col-8" ><div class="alert alert-warning alert-dismissible fade show" role="alert">'
-  html += '<strong>Terminaste!</strong> Y solo lo hiciste en ' + Math.floor(segundos/60) + ':' + Math.floor(segundos%60) + '. No estas dentro del rango ganador, probá una vez mas!'
+  html += '<strong>Terminaste!</strong> Pero bueno... en ' + Math.floor(segundos/60) + ':' + Math.floor(segundos%60) + ' . No estas dentro del rango ganador, probá una vez mas!'
   html += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'
   html += '<span aria-hidden="true">&times;</span></button></div></div>'
   }
@@ -184,8 +183,8 @@ var cambiarColorProgressBar=function(level){
 }
 var aumentarProgressBar = function (level) {
   let which='#barra'+level;
-  if(progress<100)
-    progress++;
+  progress++;
+  if(progress<=100)
     $(which).css('width', progress + '%').attr('aria-valuenow', progress);
     if(progress==100){
       toggleProp(which,'bg-success','bg-danger');
@@ -197,7 +196,7 @@ var ponerBotonPausa=function(button){
   toggleProp(button,'start',pauseStr);
   let pauseToRet='#'+pauseStr;
   $(button).attr('id',pauseStr);
-  $(pauseToRet).html('Pausa');
+  $(pauseToRet).html('PAUSA');
 }
 var onOffbutton=function(button){
   $(button).toggleClass('disabled');
@@ -222,8 +221,8 @@ var createTheWorker = function (level) {
         } while (timeDiff < time);
       };
       let rate = (e.data == 0) ? 600 : (e.data == 1) ? 1800 : 3600;
-
-      for (var i = 0; i <= 100; i++) {
+                      //pongo limite de 5000 para generar un ciclo infinito. Es problable que se va a cortar antes
+      for (var i = 0; i <= 5000; i++) {
         sleep(rate);
         self.postMessage('add');
       }
@@ -251,4 +250,4 @@ if(!($('#resumeButton1').prop('disabled')))
   $('#resumeButton1').prop('disabled',true);
 if(!($('#resumeButton2').prop('disabled')))
   $('#resumeButton2').prop('disabled',true);
-
+  cambiarCarousel('4');

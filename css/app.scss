@@ -126,7 +126,7 @@ $posibleColorProgressBar2:#eccf11;
   }
 }
 
-.alert{
+.alert,.modal-content{
     background-color: $test;
     border-color:$borderColor;
   body.dark &{
