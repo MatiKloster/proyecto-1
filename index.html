@@ -1,4 +1,326 @@
 <!doctype html>
+<<<<<<< HEAD
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+  <title>Sotra de Lepas</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <a class="navbar-brand" href="#">
+      <img src="svg/sopaBlack.svg" width="30" height="30" id="brandsvg" class="d-inline-block align-top" alt="">
+      Sotra de Lepas
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item " id="linkNavN0">
+          <a class="nav-link" href="#" number="0">Facil</a>
+        </li>
+        <li class="nav-item" id="linkNavN1">
+          <a class="nav-link" href="#" number="1">Medio</a>
+        </li>
+        <li class="nav-item" id="linkNavN2">
+          <a class="nav-link" href="#" number="2">AAAAA</a>
+        </li>
+        <li class="nav-item" id="linkNavN3">
+          <a class="nav-link" href="#" number="3">About</a>
+        </li>
+        <li class="nav-item active" id="linkNavN4">
+          <a class="nav-link" href="#" number="4">Inicio<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <button class="switch" id="switch">
+            <span><i class="fas fa-sun"></i></span>
+            <span><i class="fas fa-moon"></i></span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div id="carouselNivel" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active" id="cNivel1">
+        <div class="row py-2 justify-content-center">
+          <div class="col-6">
+            <div class="collapse" id="reglas1">
+              <div class="alert alert-info" role="alert">
+                <h5 class="alert-heading">Nivel Facil</h5>
+                <hr>
+                <p class="mb-0">-No hay palabras invertidas</p>
+                <p class="mb-0">-En el tiempo que tardaste en leer esto quizas ya la hubieras terminado</p>
+                <p class="mb-0">-Un minuto te sobra, ¿no?</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="row justify-content-center">
+              <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#reglas1"
+                aria-expanded="false" aria-controls="collapseExample">
+                Reglas
+              </button>
+              <button type="button" class="btn btn-outline-danger restart 0" hidden>RESTART</button>
+            </div>
+
+            <div class="row pt-2 justify-content-center">
+              <button type="button" class="btn btn-outline-success start" id="startButton0">►</button>
+              <button type="button" class="btn btn-outline-warning disabled 0" id="resumeButton0"
+                hidden>REANUDAR</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8" id="Grilla0">
+          </div>
+          <div class="col-2" id="Palabras0"></div>
+
+        </div>
+        <div class="row py-3 justify-content-center" id="alert0">
+
+        </div>
+        <div class="row py-2 justify-content-center">
+          <div class="col-6">
+            <div class="progress 0" hidden>
+              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%" id="barra0"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item" id="cNivel2">
+        <div class="row py-2 justify-content-center">
+          <div class="col-6">
+            <div class="collapse" id="reglas2">
+              <div class="alert alert-info" role="alert">
+                <h5 class="alert-heading">Nivel Medio</h5>
+                <hr>
+                <p class="mb-0">-Puede haber palabras invertidas</p>
+                <p class="mb-0">-Mas grande la Sotra de Lepas</p>
+                <p class="mb-0">-Tres minutos</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-2">
+            <div class="row justify-content-center">
+              <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#reglas2"
+                aria-expanded="false" aria-controls="collapseExample">
+                Reglas
+              </button>
+              <button type="button" class="btn btn-outline-danger restart 1" hidden>RESTART</button>
+            </div>
+            <div class="row pt-2 justify-content-center">
+              <button type="button" class="btn btn-outline-success start" id="startButton1">►</button>
+              <button type="button" class="btn btn-outline-warning disabled 1" id="resumeButton1"
+                hidden>REANUDAR</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-8" id="Grilla1"></div>
+          <div class="col-2" id="Palabras1"></div>
+
+        </div>
+        <div class="row py-2 justify-content-center" id="alert1">
+
+        </div>
+        <div class="row py-2 justify-content-center">
+          <div class="col-6">
+            <div class="progress 1" hidden>
+              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%" id="barra1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item" id="cNivel3">
+        <div class="row py-2 justify-content-center">
+          <div class="col-6">
+            <div class="collapse" id="reglas3">
+              <div class="alert alert-info" role="alert">
+                <h4 class="alert-heading">AAAAA </h4>
+                <hr>
+                <p class="mb-0">Cuando estaba haciendo este nivel se me rompieron las otras vocales, perdón.</p>
+                <p class="mb-0">Ah cierto, las reglas</p>
+                <p class="mb-0">-Se me invirtieron muchas palabras</p>
+                <p class="mb-0">-Todas las palabras tienen A como unica vocal</p>
+                <p class="mb-0">-Seis minutos</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-2">
+            <div class="row justify-content-center">
+              <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#reglas3"
+                aria-expanded="false" aria-controls="collapseExample">
+                Reglas
+              </button>
+              <button type="button" class="btn btn-outline-danger restart 2" hidden>RESTART</button>
+            </div>
+
+            <div class="row pt-2 justify-content-center">
+              <button type="button" class="btn btn-outline-success start" id="startButton2">►</button>
+              <button type="button" class="btn btn-outline-warning disabled 2" id="resumeButton2"
+                hidden>REAUNUDAR</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row ">
+          <div class="col-8" id="Grilla2"></div>
+          <div class="col-2" id="Palabras2"></div>
+          <div class="row pt-3 justify-content-center" id="alert2">
+
+          </div>
+        </div>
+
+        <div class="row py-2 justify-content-center">
+          <div class="col-6">
+            <div class="progress 2" hidden>
+              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%" id="barra2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item" id="cNivelAbout">
+        <div class="row py-2 justify-content-center">
+          <div class="alert  alert-info" role="alert">
+            <h5 class="alert-heading">About</h5>
+            <hr>
+            <p class="mb-0">Autor: Matias Nicolas Kloster - 13 de Mayo 2020</p>
+            <p class="mb-0">Proyecto de Ingeniería de aplicaciones web 2020</p>
+            <p class="mb-0">Departamento de Ciencias e Ingeniería de la Computación</p>
+            <p class="mb-0">Universidad Nacional del Sur - Bahía Blanca - Argentina</p>
+            <p class="mb-0">Gracias por usar mi app, le puse mucho empeño</p>
+            <p class="mb-0">Codigo: <a href="https://github.com/MatiKloster/proyecto-1" title="codigo"> AQUI</a></p>
+          </div>
+        </div>
+        <div class="row py-2 justify-content-center">
+          <div class="alert alert-info px-2" role="alert">
+            <h5 class="alert-heading">Creditos</h5>
+            <hr>
+            <p class="mb-0">Sobre todo, a mi madre, por tener la tremenda idea</p>
+            <p class="mb-0">I'd like to thank Dave Eddy <dave@daveeddy.com> since I use his wordsearch service for
+                creating the Grid</p>
+            <p class="mb-0">The service is: <a href="https://github.com/bahamas10/wordsearch.js" title="code"> Right
+                Here</a></p>
+            <p class="mb-0">Iconos diseñados por <a href="https://www.flaticon.es/autores/smashicons"
+                title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.es/" title="Flaticon">
+                www.flaticon.es</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" id="cNivelInicio">
+        <div class="row py-2 justify-content-center">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#exampleModalCenter">
+            Clickea aca si no entendés nada
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title" id="exampleModalLongTitle">Bienvenido!</h2>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <ul class="list-unstyled">
+                    <li>No muchas cosas que explicar, ¿no? Una simple página que te deja
+                      jugar a la sopa de letras. Ahora te cierra el título?</li>
+                    <li>La idea es que en cada nivel vayas encontrando las palabras mostradas en el panel de tu derecha que se esconden en la grilla dentro del tiempo puesto en las reglas. Igual... quedate tranquilo!
+                      No te voy a cortar la diversión si no llegas.</li>
+                    <li>Las reglas de cada nivel estan dentro de cada nivel clickeando
+                      el boton "Reglas".</li>
+                      <li>El boton mágico: <p><strong>► </strong></p>te va a permitir arrancar el nivel. Pero CUIDADO! el contador arranca
+                         enseguida. Mi recomendación es que leas las reglas asi arrancas preparado.</li>
+                    <li>El boton PAUSA va a frenar el tiempo para que puedas ir a hacer lo que quieras para despues
+                      tu nivel tranquilo.</li>
+                    <li> La idea es que lo uses a conciencia y no intentes buscar las palabras con el tiempo frenado.</li>
+                    <li>
+                      <p><strong>Realmente está fácil hacer trampa ahora que lo pienso :(</strong></p>
+                    </li>
+                    <li>Si aprietas PAUSA, ademas de encontrarte una sorpresa, se
+                      activará el boton REAUNUDAR, que... bueno... reanuda el timer y el juego en donde lo habias dejado
+                    </li>
+                    <li>Si la ves jodida o simplemente no te gustaron las palabras, sentite
+                      libre de apretar RESTART.</li>
+                    <li>
+                      <----- A tu izquierda vas a empezar por los niveles mas dificiles</li>
+                    <li>A tu derecha vas a empezar por los mas faciles ----------------></li>
+                    <li>Tenes a tu disposición un hermoso Dark mode por si te molestan
+                      las paginas muy claras.</li>
+                    <li>
+                      <h4><strong>GRACIAS!</strong></h4>
+                    </li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" id="yResultaQueEsteTambienCerraba ;)">Entiendo menos que antes</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" id="4 botones para lo mismo che?" hidden>El esfuerzo que le puse a esto fue sobrenatural :)</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Este boton tambien cierra</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="js/wordsearch.js"></script>
+  <script src="js/level.js"></script>
+  <script src="js/dataModel.js"></script>
+  <script src="js/htmlHandler.js"></script>
+  <script src="js/logic.js"></script>
+  <script src="js/bindListeners.js"></script>
+
+
+</body>
+
+=======
 <html>
   <head>
     <meta charset="utf-8">
@@ -15,4 +337,5 @@
     <!-- JavaScript -->
     <script src="js/app.js"></script>
   </body>
+>>>>>>> origin/entrega
 </html>
